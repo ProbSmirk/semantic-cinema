@@ -1,0 +1,11 @@
+.env
+.venv/
+__pycache__/
+data/credits.csv
+data/movies_metadata.csv
+data/ratings.csv
+data/ratings_small.csv
+data/keywords.csv
+data/links.csv
+data/links_small.csv
+movie_vectorizer.pkl

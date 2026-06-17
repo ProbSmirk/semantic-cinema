@@ -1,0 +1,7 @@
+streamlit
+pandas
+joblib
+scikit-learn
+sentence-transformers
+groq
+pydantic
