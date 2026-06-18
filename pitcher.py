@@ -1,5 +1,6 @@
 import os
 import json
+import streamlit as st  # <-- Make sure this is imported at the top!
 from pydantic import BaseModel, Field
 from openai import OpenAI
 from dotenv import load_dotenv
@@ -8,8 +9,10 @@ from dotenv import load_dotenv
 load_dotenv(override=True)
 print(f"🕵️ DEBUG: My key starts with: {str(os.environ.get('GROQ_API_KEY'))[:8]}")
 # 2. Initialize the Groq client using the OpenAI SDK routing
+api_key = st.secrets.get("GROQ_API_KEY") or os.environ.get("GROQ_API_KEY")
+
 client = OpenAI(
-    api_key=os.environ.get("GROQ_API_KEY"),
+    api_key=api_key,
     base_url="https://api.groq.com/openai/v1",
 )
 
